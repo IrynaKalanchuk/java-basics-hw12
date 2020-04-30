@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class StreamTaskTest {
-
     @DataProvider(name = "numbers")
     public static Object[][] numbers() {
         return new Object[][]{
@@ -19,8 +18,15 @@ public class StreamTaskTest {
                 {
                         new int[]{13, -2, 33, -4, 5},
                         20
+                },
+                {
+                        new int[]{0, 9, 6, 11, 12},
+                        180
+                },
+                {
+                        new int[]{0, -1, 1, -2, 2},
+                        8
                 }
-                // TODO add 2 more test data here
         };
     }
 
@@ -38,8 +44,15 @@ public class StreamTaskTest {
                 {
                         new int[]{130, -200, 330, -40, 50, 66},
                         new int[]{}
+                },
+                {
+                        new int[]{-1, 2},
+                        new int[]{-1}
+                },
+                {
+                        new int[]{-8, -3, 0, 5, -9},
+                        new int[]{-9, -3, 5}
                 }
-                // TODO add 2 more test data here
         };
     }
 
